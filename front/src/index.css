@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Encode Sans', sans-serif;
+    }
+}
+
+@layer components {
+    .btn-account {
+        @apply py-1 px-3 bg-purpleOiches rounded-md text-white text-center hover:text-black transition-all hover:cursor-pointer;
+    }
+    .btn-buscar {
+        @apply py-2 px-6 bg-purple-600 rounded-md text-white text-center hover:text-black transition-all hover:cursor-pointer w-full md:w-auto;
+    }
+    .form-input {
+        @apply p-3 border border-gray-300 rounded-lg mt-2 h-10 w-full focus:outline-none focus:ring-2 focus:ring-purple-600;
+    }
+    .form-select {
+        @apply px-4 border border-gray-300 rounded-md mt-2 h-10 w-full bg-white focus:border-purple-600;
+    }
+    .form-textarea {
+        @apply p-3 border border-gray-300 rounded-lg mt-2 min-h-40 w-full focus:outline-none focus:ring-2 focus:ring-purple-600;
+    }
+    .sect-photo {
+        @apply relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500;
+    }
+    .border-photos {
+        @apply flex items-center justify-center w-40 h-40 border-2 border-dashed border-gray-300 rounded-md relative overflow-clip;
+    }
+
+    /* Zona de héroe */
+    .hero {
+        @apply bg-gray-100 py-16 text-center md:h-[680px] w-full flex flex-col justify-center items-center;
+    }
+
+    .hero-title {
+        @apply text-4xl font-bold text-gray-800 mb-4 z-10 p-4 drop-shadow-[0_4px_3px_rgba(0,0,0,0.9)];
+    }
+
+    .hero-subtitle {
+        @apply text-lg text-gray-800 z-10 font-semibold px-4 mb-8 drop-shadow-[0_2px_1px_rgba(0,0,0,0.9)];
+    }
+
+    /* Contenedor del formulario de filtros */
+    .sala-filter-form-container,
+    .grupo-filter-form-container {
+        @apply w-full bg-gray-900 flex justify-center;
+    }
+
+    /* Filtros de salas */
+    .sala-filter-form,
+    .grupo-filter-form {
+        @apply w-full max-w-screen-lg flex flex-col md:flex-row justify-between p-4;
+    }
+
+    .sala-filter-form > *,
+    .grupo-filter-form > * {
+        @apply mx-2 my-2;
+    }
+
+    .golden-ratio-1 {
+        @apply flex-1;
+    }
+
+    .golden-ratio-2 {
+        @apply flex-[1.618];
+    }
+
+    .golden-ratio-3 {
+        @apply flex-1;
+    }
+
+    .sala-filter-form button,
+    .grupo-filter-form button {
+        @apply flex-none;
+    }
+
+    /* Tarjetas de lista */
+    .sala-list-container,
+    .grupo-list-container {
+        @apply w-11/12 flex justify-center mt-12 mb-20 mx-auto;
+    }
+
+    .sala-list,
+    .grupo-list {
+        @apply w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8;
+    }
+    .card {
+        @apply bg-gray-800 text-white  p-3 rounded-lg shadow-lg cursor-pointer w-full max-h-96 max-w-80 mx-auto;
+    }
+    .sala-card,
+    .grupo-card {
+        @apply bg-gray-900 p-3 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300;
+    }
+
+    .sala-card-image,
+    .grupo-card-image {
+        @apply w-full max-w-full h-48 max-h-48 object-cover rounded-lg mb-4 transition-transform duration-300 transform hover:scale-105;
+    }
+
+    .sala-card-title,
+    .grupo-card-title {
+        @apply text-xl font-bold text-white mb-2;
+    }
+
+    .sala-card-genre,
+    .sala-card-province,
+    .sala-card-votes,
+    .grupo-card-genre,
+    .grupo-card-province,
+    .grupo-card-votes {
+        @apply text-gray-400;
+    }
+
+    .button {
+        @apply p-4 shadow-lg rounded bg-purple-600 text-white hover:scale-105 transition-all;
+    }
+
+    .sub_title_ficha {
+        @apply text-white; /*Bold para texto como provincia genero etc... de las fichas*/
+    }
+
+    /* New classes for ProfileForm layout */
+    .form-section {
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6;
+    }
+    .profile-picture-container {
+        @apply flex flex-col items-center mb-8;
+    }
+    .profile-picture {
+        @apply w-32 h-32 mb-4 rounded-full border-4 border-dashed border-gray-300 flex items-center justify-center overflow-hidden;
+    }
+    .btn-reset {
+        @apply py-2 px-4 bg-red-500 rounded-lg text-white text-center hover:bg-red-600 transition-all;
+    }
+}
+
+.active:not(.btn-account) {
+    font-weight: 600;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: #9333ff;
+    font-size: 30px;
+    width: 30px;
+    height: 40px;
+}
+.slick-slide > div {
+    margin: 0px 10px;
+}
+.slick-dots {
+    @apply -bottom-8;
+}
+.slick-dots li button:before {
+    @apply text-sm;
+}
